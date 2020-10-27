@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dados</ion-title>
+    <ion-button slot="end" (click)="fecharModal()">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <h1>Nome: {{dados.name}}</h1>
+    <h3>Altura: {{dados.height}}</h3>
+    <h3>Peso: {{dados.mass}}</h3>
+    <h3>Genero: {{dados.gender}}</h3>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tabs" color="secundary">
+        <ion-icon slot="start" name="arrow-undo-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="small">Listar Fã Club Star Wars
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Procurar Cadastro"></ion-searchbar>
+  <ion-card *ngFor="let people of peoples; let key = index">
+    <ion-item>
+      <h2>{{people.nome}}</h2><br>
+      <ion-button slot="end" (click)="abrirEditar(key)">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+      <ion-button slot="end" (click)="excluir(key)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons class="full-width">
+      <ion-button expand="full" (click)="limparLista()">
+        <ion-icon size="large" slot="start" name="trash-bin-outline"></ion-icon>
+        Limpar Lista
+        <ion-icon size="large" slot="end" name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

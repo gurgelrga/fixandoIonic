@@ -1,0 +1,58 @@
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="person-circle"></ion-icon>
+      Pessoas
+      <ion-badge>82</ion-badge>
+      <ion-button (click)="teste()" [routerLink]="['/lista-api2']">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="planet-outline"></ion-icon>
+      Planetas
+      <ion-badge>60</ion-badge>
+      <ion-button routerLink="/lista-api2">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="rocket-outline"></ion-icon>
+      Naves
+      <ion-badge>36</ion-badge>
+      <ion-button routerLink="/lista-api2">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="car-outline"></ion-icon>
+      Veiculos
+      <ion-badge>39</ion-badge>
+      <ion-button routerLink="/lista-api2">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="videocam-outline"></ion-icon>
+      Filmes
+      <ion-badge>6</ion-badge>
+      <ion-button routerLink="/lista-api2">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="accessibility-outline"></ion-icon>
+      Especies
+      <ion-badge>37</ion-badge>
+      <a routerLink="/lista-api2">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </a>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="closePop()" expand="block">
+        <ion-icon name="close-circle-outline"></ion-icon> Fechar
+      </ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

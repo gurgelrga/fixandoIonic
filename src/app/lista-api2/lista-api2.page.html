@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tabs" color="secundary">
+        <ion-icon slot="start" name="arrow-undo-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="small">Cadastro Fã Club Star Wars
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input formControlName="nome" type="text" placaholder="Nome Completo"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select placeholder="Selecione" okText="Pronto" cancelText="Cancelar" formControlName="sexo">
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="feminino">Feminino</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-select placeholder="Escolha" okText="Pronto" cancelText="Cancelar" formControlName="estado">
+        <ion-select-option *ngFor="let estado of estados" [value]="estado.key">{{estado.value}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data Nascimento</ion-label>
+      <ion-datetime formControlName="dtNasc" displayFormat="DD MM YY" placeholder="DD MM YY" doneText="Pronto"
+        cancelText="Cancelar" pickerFormat>
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Filmes Conhecido</ion-label>
+      <ion-select multiple="true" cancelText="Cancelar" okText="Okay!" formControlName="listaFilme">
+        <ion-select-option value="1">Star Wars 1</ion-select-option>
+        <ion-select-option value="2">Star Wars 2</ion-select-option>
+        <ion-select-option value="3">Star Wars 3</ion-select-option>
+        <ion-select-option value="4">Star Wars 4</ion-select-option>
+        <ion-select-option value="5">Star Wars 5</ion-select-option>
+        <ion-select-option value="6">Star Wars 6</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-radio-group formControlName="tipoForca">
+      <ion-list-header>
+        <ion-label>Qual Seu Lado da Força?</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Jedi</ion-label>
+        <ion-radio slot="start" color="success" value="jedi"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sith</ion-label>
+        <ion-radio slot="start" color="tertiary" value="sith"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-button type="submit" color="success" expand="block" (click)="presentAlert()"> Enviar</ion-button>
+  </form>
+</ion-content>

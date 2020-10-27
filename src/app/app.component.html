@@ -1,0 +1,24 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Links</ion-list-header>
+          <ion-item>
+            <ion-menu-button [routerLink]="['/listar-api']">
+              <ion-icon name="star-outline"></ion-icon>
+              Star Wars
+            </ion-menu-button>
+          </ion-item>
+          <ion-item>
+            <ion-menu-button routerLink="/tabs">
+              <ion-icon name="layers-outline"></ion-icon>
+              Crud
+            </ion-menu-button>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
