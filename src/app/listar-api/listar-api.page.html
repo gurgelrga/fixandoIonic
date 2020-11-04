@@ -34,7 +34,7 @@
         <ion-card-content *ngFor="let planeta of planetas">
           <ion-buttons slot="end">
             {{planeta.name}}
-            <ion-button shape="round" slot="icon-only" (click)="abriModal(pessoa.url)">
+            <ion-button>
               <ion-icon name="add-circle-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -49,7 +49,7 @@
         <ion-card-content *ngFor="let nave of naves">
           <ion-buttons slot="end">
             {{nave.name}}
-            <ion-button shape="round" slot="icon-only" (click)="abriModal(pessoa.url)">
+            <ion-button>
               <ion-icon name="add-circle-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -64,7 +64,7 @@
         <ion-card-content *ngFor="let especie of especies">
           <ion-buttons slot="end">
             {{especie.name}}
-            <ion-button shape="round" slot="icon-only" (click)="abriModal(pessoa.url)">
+            <ion-button>
               <ion-icon name="add-circle-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -79,7 +79,7 @@
         <ion-card-content *ngFor="let veiculo of veiculos">
           <ion-buttons slot="end">
             {{veiculo.name}}
-            <ion-button shape="round" slot="icon-only" (click)="abriModal(pessoa.url)">
+            <ion-button>
               <ion-icon name="add-circle-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -94,7 +94,7 @@
         <ion-card-content *ngFor="let filme of filmes">
           <ion-buttons slot="end">
             {{filme.title}}
-            <ion-button shape="round" slot="icon-only" (click)="abriModal()">
+            <ion-button>
               <ion-icon name="add-circle-outline"></ion-icon>
             </ion-button>
           </ion-buttons>

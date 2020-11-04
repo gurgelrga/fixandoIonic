@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { ModalController } from "@ionic/angular";
 import { GetApiService } from "src/app/service/get-api.service";
-
+import { Api } from '../models/api';
 @Component({
   selector: "app-modal-pessoas",
   templateUrl: "./modal-pessoas.page.html",
@@ -9,13 +9,13 @@ import { GetApiService } from "src/app/service/get-api.service";
 })
 export class ModalPessoasPage implements OnInit {
   @Input() url: string;
-  dados: Array<any> = [];
+  dados: Api;
   constructor(
-    public     modal: ModalController,
-     public apiGet: GetApiService) {}
+    public modal: ModalController,
+    public apiGet: GetApiService) { }
 
   ngOnInit() {
-   this.getDados(this.url);
+    this.getDados(this.url);
   }
   getDados(url) {
     this.apiGet.getPeople(url).subscribe((response) => {
@@ -26,5 +26,5 @@ export class ModalPessoasPage implements OnInit {
   }
   fecharModal() {
     this.modal.dismiss();
- }
+  }
 }

@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class GetApiService {
-  public url: string = environment.baseUrl;
+  public url = environment.baseUrl;
   constructor(public httpClient: HttpClient) { }
 
   public getPeoples(page: number): Observable<any> {

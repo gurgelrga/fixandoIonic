@@ -1,0 +1,5 @@
+erro de keytool: java.lang.Exception: O arquivo da área de armazenamento de chaves não existe. 
+java.lang.Exception: O arquivo da área de armazenamento de chaves não existe. 
+	at sun.security.tools.keytool.Main.doCommands(Main.java:777)
+	at sun.security.tools.keytool.Main.run(Main.java:375)
+	at sun.security.tools.keytool.Main.main(Main.java:368)
